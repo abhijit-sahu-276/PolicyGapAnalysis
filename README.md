@@ -1,84 +1,275 @@
 # POLICYLENS
 
-Offline, lightweight web app to compare a policy document against a CIS/NIST reference and produce:
-1. Gap report
-2. Revised policy
-3. NIST CSF improvement roadmap
+Offline, lightweight web app to compare an organizational policy document against a CIS/NIST reference and produce:
 
-**Highlights**
-- Runs fully offline with a local TinyLlama model
-- Accepts PDF or TXT policy files
-- Domain-specific reference filtering for more relevant gaps
-- Export revised policy as PDF
+1. Gap Report
+2. Revised Policy
+3. NIST CSF Improvement Roadmap
 
-**Requirements**
-- Python 3.10+
-- Model file: `models/tinyllama-1.1b-chat.Q4_K_M.gguf`
-- No internet required during runtime
+---
 
-**Environment Setup (Windows PowerShell)**
-```powershell
-cd c:\Users\subha\Desktop\IITKK\policy_gap_analyzer
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+## Highlights
+
+* Runs **fully offline** using a local LLM model
+* Accepts **PDF or TXT policy documents**
+* Performs **domain-specific reference filtering**
+* Generates **structured gap reports**
+* Produces **revised policies automatically**
+* Export the revised policy as **PDF**
+* No internet required during runtime
+
+---
+
+## Project Structure
+
+```
+policy_gap_analyzer/
+│
+├── data/
+│   ├── inputs/
+│   └── outputs/
+│
+├── models/                       # Local LLM model goes here
+│
+├── src/
+│   └── backend/
+│       ├── app.py
+│       ├── gap_analyzer.py
+│       └── loader.py
+│
+├── backend.err.log
+├── backend.out.log
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## Requirements
+
+* Python **3.10+**
+* Required libraries listed in `requirements.txt`
+* Local LLM model (TinyLlama)
+
+Install dependencies:
+
+```
 pip install -r requirements.txt
 ```
 
-**Model Setup**
-1. Place the model file at:
-   `policy_gap_analyzer\models\tinyllama-1.1b-chat.Q4_K_M.gguf`
-2. If the filename differs, rename it to match.
+---
 
-**Run**
-```powershell
+# Model Setup (Important)
+
+This project uses the **TinyLlama 1.1B Chat model** to perform local policy analysis.
+
+Due to **GitHub file size limits (100 MB)**, the model file is **not included in this repository** and must be downloaded manually.
+
+---
+
+## Step 1 — Download the Model
+
+Download the GGUF model file:
+
+```
+tinyllama-1.1b-chat.Q4_K_M.gguf
+```
+
+You can download it from the official model repository on Hugging Face.
+
+Example source:
+
+https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-GGUF
+
+Download the file:
+
+```
+tinyllama-1.1b-chat.Q4_K_M.gguf
+```
+
+---
+
+## Step 2 — Place the Model in the Correct Folder
+
+After downloading, place the file in:
+
+```
+policy_gap_analyzer/models/
+```
+
+Final structure should look like:
+
+```
+policy_gap_analyzer/
+│
+├── models/
+│   └── tinyllama-1.1b-chat.Q4_K_M.gguf
+```
+
+If the filename differs, rename it to:
+
+```
+tinyllama-1.1b-chat.Q4_K_M.gguf
+```
+
+---
+
+# Environment Setup (Windows PowerShell)
+
+```
+cd c:\Users\subha\Desktop\IITKK\policy_gap_analyzer
+
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+
+pip install -r requirements.txt
+```
+
+---
+
+# Run the Application
+
+Start the backend server:
+
+```
 python src\backend\app.py
 ```
-Open in browser:
-```text
+
+Open in your browser:
+
+```
 http://127.0.0.1:5000/
 ```
 
-**How It Works**
-1. Select a policy domain.
-2. Upload a policy file (PDF or TXT).
-3. The app loads a domain-filtered CIS/NIST reference.
-4. Gaps are identified using:
-   - LLM gap extraction per chunk
-   - Heuristic gap checks
-   - Reference-based coverage scoring
-5. If gaps exist, the policy is revised.
-6. A NIST CSF roadmap is generated.
-7. Outputs are shown in the UI and saved to disk.
+---
 
-**Outputs**
-- `data/outputs/gaps.json`
-- `data/outputs/revised_policy.txt`
-- `data/outputs/roadmap.txt`
+# How It Works
 
-**Export Revised Policy (PDF)**
-- After analysis, click **Export PDF** in the Revised Policy panel.
-- The download happens locally and stays offline.
+1. Select a **policy domain**.
+2. Upload a **policy document** (PDF or TXT).
+3. The application loads a **domain-filtered CIS/NIST reference**.
+4. Policy analysis is performed using:
 
-**Domains**
-Available domains (from the UI):
-- ISMS
-- Data Privacy & Security
-- Patch Management
-- Risk Management
+   * LLM-based gap extraction per document chunk
+   * Heuristic policy checks
+   * Reference coverage scoring
+5. If gaps are detected:
 
-Domain filtering is controlled in:
-`src/backend/loader.py` (`DOMAIN_FILTERS`)
+   * A **revised policy** is generated.
+6. A **NIST CSF improvement roadmap** is generated.
+7. All outputs are displayed in the UI and saved locally.
 
-**Troubleshooting**
-- **Browser says “127.0.0.1 refused to connect”**
-  - The server is not running. Start it with `python src\backend\app.py`.
-- **“Unexpected token '<' … not valid JSON”**
-  - The backend returned HTML due to a 500 error. Check the server console.
-- **PDF export error about horizontal space**
-  - Fixed by wrapping long tokens. Restart the server if you updated code.
-- **Model not found**
-  - Ensure the model file exists at `models/tinyllama-1.1b-chat.Q4_K_M.gguf`.
+---
 
-**Notes**
-- PDF extraction works best with selectable text.
-- Very long policies are chunked; outputs are capped for stability.
+# Outputs
+
+Generated files are saved in:
+
+```
+data/outputs/
+```
+
+Files generated:
+
+```
+data/outputs/gaps.json
+data/outputs/revised_policy.txt
+data/outputs/roadmap.txt
+```
+
+---
+
+# Export Revised Policy (PDF)
+
+After analysis:
+
+1. Go to the **Revised Policy panel**
+2. Click **Export PDF**
+3. The revised policy will download locally
+
+The entire process remains **offline**.
+
+---
+
+# Supported Policy Domains
+
+Available domains in the UI:
+
+* ISMS
+* Data Privacy & Security
+* Patch Management
+* Risk Management
+
+Domain filtering logic is defined in:
+
+```
+src/backend/loader.py
+```
+
+Look for:
+
+```
+DOMAIN_FILTERS
+```
+
+---
+
+# Troubleshooting
+
+### Browser shows "127.0.0.1 refused to connect"
+
+The backend server is not running.
+
+Start it using:
+
+```
+python src\backend\app.py
+```
+
+---
+
+### “Unexpected token '<' … not valid JSON”
+
+This usually means the backend returned an **HTML error page instead of JSON**.
+
+Check the backend terminal for a **500 error**.
+
+---
+
+### PDF export error about horizontal space
+
+This occurs when text tokens exceed PDF width.
+
+Restart the server after applying code updates.
+
+---
+
+### Model Not Found
+
+Ensure the model file exists at:
+
+```
+models/tinyllama-1.1b-chat.Q4_K_M.gguf
+```
+
+---
+
+# Notes
+
+* The TinyLlama model file is **~600MB**, therefore it is excluded from this repository.
+* The application runs **fully offline once the model is downloaded**.
+* PDF extraction works best with **selectable text PDFs**.
+* Very long policies are **chunked for stable processing**.
+
+---
+
+# Author
+
+**Abhijit Sahu**
+B.Tech Computer Science Engineering
+
+---
+
+# License
+
+This project is for **academic and research purposes**.
