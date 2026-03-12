@@ -1,0 +1,319 @@
+{
+  "gap_found": true,
+  "gaps": [
+    {
+      "clause": "GV.RM",
+      "gap": "No defined risk appetite or risk tolerance statement.",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "GV.RR",
+      "gap": "No clear accountability structure or named security roles.",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "ID.RA",
+      "gap": "No defined risk assessment methodology.",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "PR.DS",
+      "gap": "No data classification levels or handling rules.",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "PR.AA",
+      "gap": "No strong access control model (e.g., least privilege/MFA/RBAC).",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "PR.DS",
+      "gap": "No explicit encryption requirements for data at rest or in transit.",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "PR.AT",
+      "gap": "No defined security awareness training structure.",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "DE.CM",
+      "gap": "No monitoring or logging requirements for detection.",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "RS.MA",
+      "gap": "No incident response lifecycle defined.",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "RC.RP",
+      "gap": "No backup, recovery, or restoration process.",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "GV.OC-01",
+      "gap": "The organizational mission is understood and informs cybersecurity risk management",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "GV.OC-03",
+      "gap": "Legal, regulatory, and contractual requirements regarding cybersecurity\u2014 including privacy and civil liberties obligations\u2014are understood and managed",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "GV.RM-04",
+      "gap": "Strategic direction that describes appropriate risk response options is established and communicated",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "GV.RM-06",
+      "gap": "A standardized method for calculating, documenting, categorizing, and prioritizing cybersecurity risks is established and communicated",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "GV.RM-07",
+      "gap": "Strategic opportunities (i.e., positive risks) are characterized and are included in organizational cybersecurity risk discussions",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "GV.RR-01",
+      "gap": "Organizational leadership is responsible and accountable for cybersecurity risk and fosters a culture that is risk-aware, ethical, and continually improving",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "GV.PO-02",
+      "gap": "Policy for managing cybersecurity risks is reviewed, updated, communicated, and enforced to reflect changes in requirements, threats, technology, and organiz...",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "GV.OV-01",
+      "gap": "Cybersecurity risk management strategy outcomes are reviewed to inform and adjust strategy and direction",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "GV.OV-02",
+      "gap": "The cybersecurity risk management strategy is reviewed and adjusted to ensure coverage of organizational requirements and risks",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "GV.OV-03",
+      "gap": "Organizational cybersecurity risk management performance is evaluated and reviewed for adjustments needed",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "GV.SC-03",
+      "gap": "Cybersecurity supply chain risk management is integrated into cybersecurity and enterprise risk management, risk assessment, and improvement processes",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "GV.SC-04",
+      "gap": "Suppliers are known and prioritized by criticality",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "GV.SC-09",
+      "gap": "Supply chain security practices are integrated into cybersecurity and enterprise risk management programs, and their performance is monitored throughout the...",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "GV.SC-10",
+      "gap": "Cybersecurity supply chain risk management plans include provisions for activities that occur after the conclusion of a partnership or service agreement",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "ID.RA-01",
+      "gap": "Vulnerabilities in assets are identified, validated, and recorded",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "ID.RA-02",
+      "gap": "Cyber threat intelligence is received from information sharing forums and sources",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "ID.RA-04",
+      "gap": "Potential impacts and likelihoods of threats exploiting vulnerabilities are identified and recorded",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "ID.RA-05",
+      "gap": "Threats, vulnerabilities, likelihoods, and impacts are used to understand inherent risk and inform risk response prioritization",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "ID.RA-06",
+      "gap": "Risk responses are chosen, prioritized, planned, tracked, and communicated",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "ID.RA-09",
+      "gap": "The authenticity and integrity of hardware and software are assessed prior to acquisition and use",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "ID.RA-10",
+      "gap": "Critical suppliers are assessed prior to acquisition",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "ID.IM-01",
+      "gap": "Improvements are identified from evaluations",
+      "severity": "med",
+      "chunk_index": -1
+    },
+    {
+      "clause": "PR.AA-02",
+      "gap": "Identities are proofed and bound to credentials based on the context of interactions",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "PR.AA-03",
+      "gap": "Users, services, and hardware are authenticated",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "PR.AA-04",
+      "gap": "Identity assertions are protected, conveyed, and verified",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "PR.AA-06",
+      "gap": "Physical access to assets is managed, monitored, and enforced commensurate with risk",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "PR.PS-02",
+      "gap": "Software is maintained, replaced, and removed commensurate with risk",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "PR.PS-03",
+      "gap": "Hardware is maintained, replaced, and removed commensurate with risk",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "PR.PS-04",
+      "gap": "Log records are generated and made available for continuous monitoring",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "PR.PS-05",
+      "gap": "Installation and execution of unauthorized software are prevented",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "PR.PS-06",
+      "gap": "Secure software development practices are integrated, and their performance is monitored throughout the software development life cycle",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "PR.IR-01",
+      "gap": "Networks and environments are protected from unauthorized logical access and usage",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "DE.AE-03",
+      "gap": "Information is correlated from multiple sources",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "DE.AE-07",
+      "gap": "Cyber threat intelligence and other contextual information are integrated into the analysis",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "RS.MA-02",
+      "gap": "Incident reports are triaged and validated",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "RS.MA-04",
+      "gap": "Incidents are escalated or elevated as needed",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "RS.MA-05",
+      "gap": "The criteria for initiating incident recovery are applied",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "RS.AN-03",
+      "gap": "Analysis is performed to establish what has taken place during an incident and the root cause of the incident",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "RS.AN-08",
+      "gap": "An incident's magnitude is estimated and validated",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "RC.RP-01",
+      "gap": "The recovery portion of the incident response plan is executed once initiated from the incident response process",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "RC.RP-02",
+      "gap": "Recovery actions are selected, scoped, prioritized, and performed",
+      "severity": "high",
+      "chunk_index": -1
+    },
+    {
+      "clause": "RC.RP-04",
+      "gap": "Critical mission functions and cybersecurity risk management are considered to establish post-incident operational norms",
+      "severity": "high",
+      "chunk_index": -1
+    }
+  ],
+  "domain": "ISMS",
+  "status": "gaps_found"
+}

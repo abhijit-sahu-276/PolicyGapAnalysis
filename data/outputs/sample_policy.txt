@@ -1,0 +1,5 @@
+ISMS Policy
+Scope: This policy covers information systems.
+Roles: Security team manages access approvals.
+Access Control: Users must use strong passwords.
+Incident Response: Report incidents to security.

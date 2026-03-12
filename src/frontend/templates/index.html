@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Local LLM Policy Gap Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div class="hero-content">
+          <div class="badge">Offline | Local LLM | CIS-NIST</div>
+          <h1><span class="brand">POLICYLENS</span> — Policy Gap Analysis and Improvement</h1>
+          <p>Analyze policies against local CIS-NIST references and produce revised policy text and a NIST CSF roadmap.</p>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="panel">
+          <h2>Run Analysis</h2>
+          <form id="analyzeForm" enctype="multipart/form-data">
+            <label class="field">
+              <span>Policy Domain</span>
+              <select name="domain" required>
+                <option value="">Select a domain</option>
+                <option>ISMS</option>
+                <option>Data Privacy & Security</option>
+                <option>Patch Management</option>
+                <option>Risk Management</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Policy File (PDF or TXT)</span>
+              <input type="file" name="policy_file" accept=".pdf,.txt" required />
+            </label>
+
+            <button type="submit" class="primary">Run Analysis</button>
+          </form>
+          <div id="status" class="status">Ready</div>
+        </section>
+
+        <section class="panel">
+          <h2>Gap Report</h2>
+          <div id="gapSummary" class="summary">No analysis yet.</div>
+          <ul id="gapList" class="gap-list"></ul>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Revised Policy</h2>
+            <div class="actions">
+              <button id="exportPdf" class="secondary" type="button" disabled>Export PDF</button>
+            </div>
+          </div>
+          <pre id="revisedPolicy" class="output">No analysis yet.</pre>
+        </section>
+
+        <section class="panel">
+          <h2>NIST CSF Improvement Roadmap</h2>
+          <pre id="roadmap" class="output">No analysis yet.</pre>
+        </section>
+      </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>
